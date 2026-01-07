@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandra KS | Portfolio</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-left">Sandra KS</div>
+  <ul class="nav-right">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Sandra KS</h1>
+      <p class="sub">Integrated MSc Data Science (4th Year)</p>
+      <p>Machine Learning • Healthcare AI • Research</p>
+      <a class="btn" href="assets/Sandra_KS_resume.pdf" download>Download Resume</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/profile.jpg" alt="Sandra KS">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>
+    I am a 4th-year Integrated MSc Data Science student at Amrita Vishwa Vidyapeetham,
+    passionate about Machine Learning, Healthcare AI, and research-driven intelligent systems.
+  </p>
+</section>
+
+<!-- EDUCATION (TIMELINE) -->
+<section id="education" data-aos="fade-up">
+  <h2>Education</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="year">2022 – 2027</span>
+      <h3>Integrated MSc Data Science</h3>
+      <p>Amrita Vishwa Vidyapeetham (4th Year)</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2019 – 2021</span>
+      <h3>Higher Secondary Education</h3>
+      <p>Christ Nagar School • 87.4%</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2019</span>
+      <h3>Higher School Education</h3>
+      <p>Christ Nagar School • 91.8%</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" data-aos="fade-right">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>Research Intern</h3>
+    <span>Digital University Kerala</span>
+    <p>
+      Worked on graph-based machine learning models for acoustic signal processing.
+      Conducted literature review and implemented experimental ML pipelines.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS (EXPANDABLE) -->
+<section id="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card" onclick="toggleProject(this)">
+      <h3>Human–Opponent Modelling (RPS)</h3>
+      <p class="short">Reinforcement Learning with gesture control.</p>
+      <div class="project-details">
+        <p>
+          Adaptive RL agent using Q-learning and Markov behavior prediction,
+          integrated with MediaPipe and OpenCV for real-time hand gesture recognition.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleProject(this)">
+      <h3>Agro Deep Learning Framework</h3>
+      <p class="short">Crop yield prediction using DL.</p>
+      <div class="project-details">
+        <p>
+          Multi-input deep learning model using weather data, soil parameters,
+          NDVI, and crop type to improve yield prediction accuracy.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleProject(this)">
+      <h3>North Indian Ocean Cyclogenesis</h3>
+      <p class="short">Cyclone trend analysis.</p>
+      <div class="project-details">
+        <p>
+          Machine learning-based forecasting of cyclone activity using historical
+          meteorological data to identify long-term risk factors.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" data-aos="fade-up">
+  <h2>Certifications</h2>
+  <ul class="cert-list">
+    <li>Fundamentals of Reinforcement Learning – Coursera</li>
+    <li>Google Cloud Generative AI Learning Path</li>
+    <li>Data Analysis for Biologists – NPTEL</li>
+    <li>Python Data Structures – Great Learning</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:sandrakaveesher@gmail.com">sandrakaveesher@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/kssandraeshwar" target="_blank">kssandraeshwar</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/sandrasmithakaveesher" target="_blank">Sandra KS</a></p>
+</section>
+
+<footer>
+  © 2026 Sandra KS
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 900, once: true });</script>
+
+</body>
+</html>
