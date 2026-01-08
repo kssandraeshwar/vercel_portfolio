@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL RESET & BASE
-========================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +12,7 @@ body {
   line-height: 1.7;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ================= NAVBAR ================= */
 .navbar {
   position: sticky;
   top: 0;
@@ -24,9 +20,7 @@ body {
   padding: 18px 80px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(8px);
 }
 
 .nav-left {
@@ -35,101 +29,88 @@ body {
 }
 
 .nav-right a {
-  margin-left: 28px;
-  text-decoration: none;
+  margin-left: 24px;
   color: #cbd5f5;
-  font-weight: 500;
+  text-decoration: none;
 }
 
 .nav-right a:hover {
   color: #38bdf8;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* ================= HERO ================= */
+/* THIS IS THE KEY FIX */
 .hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 120px 100px;
-  gap: 60px;
+  gap: 40px;              /* space between text & image */
+  padding: 110px 100px;
 }
 
+/* TEXT BLOCK */
 .hero-text {
-  flex: 1;
-  max-width: 560px;
+  max-width: 600px;
 }
 
 .hero-text h1 {
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .subtitle {
-  color: #cbd5f5;
   font-size: 18px;
-  margin-bottom: 28px;
+  color: #cbd5f5;
+  margin-bottom: 22px;
 }
 
+/* BUTTON */
 .btn {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 12px 28px;
   background: #38bdf8;
   color: #020617;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(56,189,248,0.4);
+  background: #0ea5e9;
 }
 
+/* IMAGE BESIDE NAME (SMALL) */
 .hero-image {
-  flex: 0 0 260px;
-  display: flex;
-  justify-content: center;
+  flex-shrink: 0;
 }
 
 .hero-image img {
-  width: 260px;
-  height: 260px;
+  width: 150px;           /* SMALL SIZE */
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 6px solid #38bdf8;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  border: 5px solid #38bdf8;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* ================= SECTIONS ================= */
 .section {
   padding: 90px 120px;
 }
 
 .section h2 {
   font-size: 32px;
-  font-weight: 600;
   margin-bottom: 30px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ================= ABOUT ================= */
 .section p {
   max-width: 900px;
   margin-bottom: 16px;
   color: #d1d5db;
 }
 
-/* =========================
-   EDUCATION TIMELINE
-========================= */
+/* ================= EDUCATION ================= */
 .timeline {
   border-left: 2px solid #38bdf8;
   padding-left: 35px;
@@ -138,21 +119,6 @@ body {
 .timeline-item {
   position: relative;
   margin-bottom: 40px;
-}
-
-.timeline-item h3 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.timeline-item p {
-  margin: 4px 0;
-  color: #cbd5f5;
-}
-
-.timeline-item span {
-  font-size: 14px;
-  color: #94a3b8;
 }
 
 .dot {
@@ -165,29 +131,15 @@ body {
   top: 6px;
 }
 
-/* =========================
-   EXPERIENCE
-========================= */
+/* ================= EXPERIENCE ================= */
 .experience-box {
   max-width: 900px;
   background: rgba(2,6,23,0.6);
-  padding: 30px;
+  padding: 32px;
   border-radius: 16px;
 }
 
-.experience-box h3 {
-  font-size: 20px;
-  margin-bottom: 6px;
-}
-
-.experience-box .org {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-/* =========================
-   PROJECTS
-========================= */
+/* ================= PROJECTS ================= */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -199,38 +151,23 @@ body {
   padding: 26px;
   border-radius: 18px;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-}
-
-.project-card h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.project-card .short {
-  font-size: 14px;
-  color: #94a3b8;
+  transform: translateY(-6px);
 }
 
 .project-card .details {
   display: none;
-  margin-top: 14px;
+  margin-top: 12px;
   color: #cbd5f5;
-  font-size: 14px;
 }
 
 .project-card.active .details {
   display: block;
 }
 
-/* =========================
-   CERTIFICATIONS
-========================= */
+/* ================= CERTIFICATIONS ================= */
 .cert-list {
   list-style: none;
   max-width: 800px;
@@ -239,32 +176,22 @@ body {
 .cert-list li {
   padding: 14px 0;
   border-bottom: 1px solid rgba(148,163,184,0.2);
-  color: #d1d5db;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* ================= CONTACT ================= */
 #contact p {
   margin-bottom: 10px;
 }
 
 a {
   color: #38bdf8;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
+/* ================= SCROLL ANIMATION ================= */
 .fade-in {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(30px);
+  transition: 0.8s ease;
 }
 
 .fade-in.show {
@@ -272,26 +199,20 @@ a:hover {
   transform: translateY(0);
 }
 
-/* =========================
-   RESPONSIVE (MOBILE)
-========================= */
+/* ================= MOBILE ================= */
 @media (max-width: 900px) {
-  .navbar {
-    padding: 16px 30px;
-  }
-
   .hero {
     flex-direction: column;
-    padding: 80px 30px;
     text-align: center;
   }
 
   .hero-image {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .section {
     padding: 70px 30px;
   }
 }
+
 
