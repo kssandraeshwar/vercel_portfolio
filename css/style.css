@@ -5,8 +5,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #e5e7eb;
   line-height: 1.7;
@@ -20,6 +24,7 @@ body {
   padding: 18px 80px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: rgba(15, 23, 42, 0.95);
 }
 
@@ -32,65 +37,74 @@ body {
   margin-left: 24px;
   color: #cbd5f5;
   text-decoration: none;
+  font-size: 15px;
 }
 
 .nav-right a:hover {
   color: #38bdf8;
 }
 
-/* ================= HERO ================= */
-/* THIS IS THE KEY FIX */
+/* ================= HERO SECTION ================= */
 .hero {
   display: flex;
+  justify-content: space-between;   /* KEY LINE */
   align-items: center;
-  gap: 40px;              /* space between text & image */
-  padding: 110px 100px;
+  padding: 120px 100px;
+  min-height: 90vh;
 }
 
-/* TEXT BLOCK */
+/* LEFT TEXT */
 .hero-text {
   max-width: 600px;
 }
 
 .hero-text h1 {
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
 }
 
-.subtitle {
-  font-size: 18px;
+.hero-text .degree {
+  font-size: 19px;
   color: #cbd5f5;
-  margin-bottom: 22px;
+  margin-bottom: 6px;
+}
+
+.hero-text .domain {
+  font-size: 18px;
+  color: #93c5fd;
+  margin-bottom: 26px;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 14px 32px;
   background: #38bdf8;
   color: #020617;
-  border-radius: 30px;
+  border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
+  font-size: 15px;
 }
 
 .btn:hover {
   background: #0ea5e9;
 }
 
-/* IMAGE BESIDE NAME (SMALL) */
+/* ================= HERO IMAGE (RIGHT SIDE) ================= */
 .hero-image {
   flex-shrink: 0;
 }
 
 .hero-image img {
-  width: 150px;           /* SMALL SIZE */
-  height: 150px;
+  width: 220px;               /* SMALL & PROFESSIONAL */
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #38bdf8;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  border: 6px solid #38bdf8;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.55);
 }
 
 /* ================= SECTIONS ================= */
@@ -100,20 +114,20 @@ body {
 
 .section h2 {
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 /* ================= ABOUT ================= */
 .section p {
   max-width: 900px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: #d1d5db;
 }
 
-/* ================= EDUCATION ================= */
+/* ================= EDUCATION TIMELINE ================= */
 .timeline {
   border-left: 2px solid #38bdf8;
-  padding-left: 35px;
+  padding-left: 40px;
 }
 
 .timeline-item {
@@ -121,36 +135,38 @@ body {
   margin-bottom: 40px;
 }
 
-.dot {
+.timeline-item::before {
+  content: "";
   width: 12px;
   height: 12px;
   background: #38bdf8;
   border-radius: 50%;
   position: absolute;
-  left: -41px;
+  left: -47px;
   top: 6px;
 }
 
 /* ================= EXPERIENCE ================= */
 .experience-box {
   max-width: 900px;
-  background: rgba(2,6,23,0.6);
-  padding: 32px;
-  border-radius: 16px;
+  background: rgba(2, 6, 23, 0.65);
+  padding: 36px;
+  border-radius: 18px;
 }
 
 /* ================= PROJECTS ================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 .project-card {
   background: linear-gradient(145deg, #020617, #0f172a);
-  padding: 26px;
-  border-radius: 18px;
+  padding: 28px;
+  border-radius: 20px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .project-card:hover {
@@ -159,8 +175,9 @@ body {
 
 .project-card .details {
   display: none;
-  margin-top: 12px;
+  margin-top: 14px;
   color: #cbd5f5;
+  font-size: 14px;
 }
 
 .project-card.active .details {
@@ -174,8 +191,9 @@ body {
 }
 
 .cert-list li {
-  padding: 14px 0;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(148,163,184,0.2);
+  font-size: 15px;
 }
 
 /* ================= CONTACT ================= */
@@ -183,8 +201,9 @@ body {
   margin-bottom: 10px;
 }
 
-a {
+#contact a {
   color: #38bdf8;
+  text-decoration: none;
 }
 
 /* ================= SCROLL ANIMATION ================= */
@@ -204,10 +223,11 @@ a {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 80px 30px;
   }
 
   .hero-image {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .section {
