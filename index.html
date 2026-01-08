@@ -1,133 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sandra KS | Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Sandra KS | Data Science Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
+<!-- NAV -->
+<nav class="navbar">
   <div class="nav-left">Sandra KS</div>
-  <ul class="nav-right">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="nav-right">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Sandra KS</h1>
-      <p class="sub">Integrated MSc Data Science (4th Year)</p>
-      <p>Machine Learning • Healthcare AI • Research</p>
-      <a class="btn" href="assets/Sandra_KS_resume.pdf" download>Download Resume</a>
-    </div>
-    <div class="hero-image">
-      <img src="assets/verceldp.jpeg" alt="Sandra KS">
-    </div>
+  <div class="hero-text">
+    <h1>Building Intelligent Systems<br>with Data & Research</h1>
+    <p class="subtitle">
+      Integrated MSc Data Science (4th Year) <br>
+      Machine Learning • Healthcare AI • Research
+    </p>
+    <a class="btn" href="assets/Sandra_KS_Resume.pdf" download>Download Resume</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/profile.jpg" alt="Sandra KS">
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" data-aos="fade-up">
+<section id="about" class="section fade-in">
   <h2>About Me</h2>
   <p>
-    I am a 4th-year Integrated MSc Data Science student at Amrita Vishwa Vidyapeetham,
-    passionate about Machine Learning, Healthcare AI, and research-driven intelligent systems.
+    I am a 4th-year Integrated MSc Data Science student at Amrita Vishwa Vidyapeetham
+    with strong academic grounding and hands-on experience in machine learning,
+    data analysis, and research-oriented problem solving.
+  </p>
+  <p>
+    My interests lie at the intersection of Machine Learning, Healthcare AI, and
+    data-driven decision systems. I enjoy working on end-to-end ML pipelines —
+    from data preprocessing and exploratory analysis to model building,
+    evaluation, and interpretation.
+  </p>
+  <p>
+    I am particularly inclined towards research, explainable AI, and applying
+    ML solutions to real-world societal and healthcare challenges.
   </p>
 </section>
 
-<!-- EDUCATION (TIMELINE) -->
-<section id="education" data-aos="fade-up">
+<!-- EDUCATION -->
+<section id="education" class="section fade-in">
   <h2>Education</h2>
-
   <div class="timeline">
     <div class="timeline-item">
-      <span class="year">2022 – 2027</span>
-      <h3>Integrated MSc Data Science</h3>
-      <p>Amrita Vishwa Vidyapeetham (4th Year)</p>
+      <span class="dot"></span>
+      <div>
+        <h3>Integrated MSc Data Science</h3>
+        <p>Amrita Vishwa Vidyapeetham</p>
+        <span>2022 – 2027 (Expected)</span>
+      </div>
     </div>
 
     <div class="timeline-item">
-      <span class="year">2019 – 2021</span>
-      <h3>Higher Secondary Education</h3>
-      <p>Christ Nagar School • 87.4%</p>
+      <span class="dot"></span>
+      <div>
+        <h3>Higher Secondary Education</h3>
+        <p>Christ Nagar School</p>
+        <span>2019 – 2021 | Grade: 87.4%</span>
+      </div>
     </div>
 
     <div class="timeline-item">
-      <span class="year">2019</span>
-      <h3>Higher School Education</h3>
-      <p>Christ Nagar School • 91.8%</p>
+      <span class="dot"></span>
+      <div>
+        <h3>Secondary Education</h3>
+        <p>Christ Nagar School</p>
+        <span>2019 | Grade: 91.8%</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" data-aos="fade-right">
+<section id="experience" class="section fade-in">
   <h2>Experience</h2>
-
-  <div class="card">
+  <div class="experience-box">
     <h3>Research Intern</h3>
-    <span>Digital University Kerala</span>
+    <p class="org">Digital University Kerala</p>
     <p>
       Worked on graph-based machine learning models for acoustic signal processing.
-      Conducted literature review and implemented experimental ML pipelines.
+      Conducted literature reviews, implemented experimental ML pipelines,
+      and evaluated model performance using research-grade methodologies.
     </p>
   </div>
 </section>
 
-<!-- PROJECTS (EXPANDABLE) -->
-<section id="projects" data-aos="fade-up">
+<!-- PROJECTS -->
+<section id="projects" class="section fade-in">
   <h2>Projects</h2>
 
   <div class="projects-grid">
 
-    <div class="project-card" onclick="toggleProject(this)">
-      <h3>Human–Opponent Modelling (RPS)</h3>
-      <p class="short">Reinforcement Learning with gesture control.</p>
-      <div class="project-details">
-        <p>
-          Adaptive RL agent using Q-learning and Markov behavior prediction,
-          integrated with MediaPipe and OpenCV for real-time hand gesture recognition.
-        </p>
+    <div class="project-card">
+      <h3>Human–Opponent Modelling in Rock–Paper–Scissors</h3>
+      <p class="short">Gesture-controlled Reinforcement Learning game</p>
+      <div class="details">
+        Developed an interactive Rock–Paper–Scissors game using adaptive
+        Reinforcement Learning with real-time hand gesture recognition via
+        MediaPipe and OpenCV. Implemented Q-learning, opponent modeling,
+        and Markov-style behavior prediction to anticipate player moves.
+        Visualized learning progress, win rates, and strategy adaptation.
       </div>
     </div>
 
-    <div class="project-card" onclick="toggleProject(this)">
-      <h3>Agro Deep Learning Framework</h3>
-      <p class="short">Crop yield prediction using DL.</p>
-      <div class="project-details">
-        <p>
-          Multi-input deep learning model using weather data, soil parameters,
-          NDVI, and crop type to improve yield prediction accuracy.
-        </p>
+    <div class="project-card">
+      <h3>Agro Deep Learning Framework for Crop Production</h3>
+      <p class="short">Multi-source agricultural yield prediction</p>
+      <div class="details">
+        Implemented a simplified Agro Deep Learning Framework (ADLF) using
+        weather parameters, soil conditions, and satellite-derived NDVI data.
+        Designed a multi-input neural architecture inspired by precision
+        agriculture research to improve yield prediction accuracy over
+        traditional ML models.
       </div>
     </div>
 
-    <div class="project-card" onclick="toggleProject(this)">
-      <h3>North Indian Ocean Cyclogenesis</h3>
-      <p class="short">Cyclone trend analysis.</p>
-      <div class="project-details">
-        <p>
-          Machine learning-based forecasting of cyclone activity using historical
-          meteorological data to identify long-term risk factors.
-        </p>
+    <div class="project-card">
+      <h3>Digital Library Management System</h3>
+      <p class="short">Full-stack academic library web application</p>
+      <div class="details">
+        Built a full-stack Java web application using Servlets, JSP,
+        PostgreSQL, and MVC architecture. Implemented user authentication,
+        role-based access, admin dashboards, book management, and borrowing
+        workflows. Designed for scalability and secure academic usage.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Discipline-wise Outcome Satisfaction Analyzer</h3>
+      <p class="short">AI usage analytics in academic environments</p>
+      <div class="details">
+        Conducted a large-scale analysis on 10,000+ student-AI interaction
+        records to study satisfaction across academic disciplines. Applied
+        ANOVA, Tukey HSD, exploratory analysis, and Random Forest modeling
+        to identify key satisfaction drivers and feature importance.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>North Indian Ocean Cyclogenesis Analysis</h3>
+      <p class="short">Cyclone trend analysis using ML</p>
+      <div class="details">
+        Analyzed long-term meteorological datasets to identify cyclone
+        formation trends in the North Indian Ocean. Built predictive ML
+        models to forecast cyclonic activity and provide insights useful
+        for disaster preparedness and early warning systems.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Parkinson’s UPDRS Prediction</h3>
+      <p class="short">Disease progression modeling using ML</p>
+      <div class="details">
+        Developed regression and ML models to predict Parkinson’s disease
+        progression using clinical and biological features. Evaluated models
+        using MAE, MSE, and R² metrics and implemented reliable predictive
+        pipelines to support clinical decision-making.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Crop Production Dashboard (1997–2017)</h3>
+      <p class="short">Interactive agricultural data visualization</p>
+      <div class="details">
+        Built an interactive Jupyter-based dashboard to analyze crop production
+        trends across Indian states. Performed exploratory analysis, dynamic
+        charting, and seasonal comparisons to extract insights on agricultural
+        variability and productivity.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Gold Price Forecasting</h3>
+      <p class="short">Time-series forecasting with ML & DL</p>
+      <div class="details">
+        Designed a gold price forecasting system using ARIMA, XGBoost,
+        Random Forest, and LSTM models. Incorporated economic indicators
+        such as stock indices, oil prices, and forex rates. LSTM achieved
+        the strongest predictive performance on multivariate time-series data.
       </div>
     </div>
 
@@ -135,32 +208,26 @@
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certifications" data-aos="fade-up">
+<section id="certifications" class="section fade-in">
   <h2>Certifications</h2>
   <ul class="cert-list">
     <li>Fundamentals of Reinforcement Learning – Coursera</li>
     <li>Google Cloud Generative AI Learning Path</li>
     <li>Data Analysis for Biologists – NPTEL</li>
     <li>Python Data Structures – Great Learning</li>
+    <li>Emerging Data Science Technologies – Amrita Workshop</li>
   </ul>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" data-aos="fade-up">
+<section id="contact" class="section fade-in">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:sandrakaveesher@gmail.com">sandrakaveesher@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/kssandraeshwar" target="_blank">kssandraeshwar</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/sandrasmithakaveesher" target="_blank">Sandra KS</a></p>
+  <p>GitHub: <a href="https://github.com/kssandraeshwar" target="_blank">github.com/kssandraeshwar</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/sandrasmithakaveesher" target="_blank">linkedin.com/in/sandrasmithakaveesher</a></p>
 </section>
 
-<footer>
-  © 2026 Sandra KS
-</footer>
-
-<!-- JS -->
 <script src="js/main.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 900, once: true });</script>
-
 </body>
 </html>
+
